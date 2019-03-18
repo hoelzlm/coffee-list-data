@@ -24,7 +24,8 @@
     },
     "priceToPay": {
       "type": "number",
-      "required": true
+      "required": true,
+      "default": 0
     },
     "paid": {
       "type": "boolean",
