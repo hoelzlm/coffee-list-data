@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "members": 2
+    "members": 7
   },
   "models": {
     "User": {},
@@ -14,7 +14,13 @@
     "RoleMapping": {},
     "Role": {},
     "members": {
-      "1": "{\"fullName\":\"Martin Saigger\",\"firstName\":\"Martin\",\"lastName\":\"Saigger\",\"cupsOfCoffee\":1,\"priceToPay\":1,\"paid\":false,\"id\":1}"
+      "1": "{\"fullName\":\"Martin Saigger\",\"firstName\":\"Martin\",\"lastName\":\"Saigger\",\"cupsOfCoffee\":6,\"priceToPay\":1.5,\"paid\":false,\"id\":1}",
+      "2": "{\"fullName\":\"Markus Hölzle\",\"firstName\":\"Markus\",\"lastName\":\"Hölzle\",\"cupsOfCoffee\":2,\"priceToPay\":0.5,\"paid\":false,\"id\":2}",
+      "3": "{\"fullName\":\"Andreas Müller\",\"firstName\":\"Andreas\",\"lastName\":\"Müller\",\"cupsOfCoffee\":1,\"priceToPay\":0.25,\"paid\":false,\"id\":3}",
+      "4": "{\"fullName\":\"Stefan  Diet \",\"firstName\":\"Stefan\",\"lastName\":\"Diet\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":4}",
+      "5": "{\"fullName\":\"Thomas  Maier\",\"firstName\":\"Thomas \",\"lastName\":\"Maier\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":5}",
+      "6": "{\"fullName\":\"Markus Müller\",\"firstName\":\"Markus\",\"lastName\":\"Müller\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":6}",
+      "7": "{\"fullName\":\"Günter Herbst\",\"firstName\":\"Günter\",\"lastName\":\"Herbst\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":7}"
     }
   }
 }
