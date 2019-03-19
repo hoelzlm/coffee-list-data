@@ -19,7 +19,7 @@
       "3": "{\"fullName\":\"Andreas Müller\",\"firstName\":\"Andreas\",\"lastName\":\"Müller\",\"cupsOfCoffee\":1,\"priceToPay\":0.25,\"paid\":false,\"id\":3}",
       "4": "{\"fullName\":\"Stefan  Diet \",\"firstName\":\"Stefan\",\"lastName\":\"Diet\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":4}",
       "5": "{\"fullName\":\"Thomas  Maier\",\"firstName\":\"Thomas \",\"lastName\":\"Maier\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":5}",
-      "6": "{\"fullName\":\"Markus Müller\",\"firstName\":\"Markus\",\"lastName\":\"Müller\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":6}",
+      "6": "{\"fullName\":\"Markus Müller\",\"firstName\":\"Markus\",\"lastName\":\"Müller\",\"cupsOfCoffee\":1,\"priceToPay\":0.25,\"paid\":false,\"id\":6}",
       "7": "{\"fullName\":\"Günter Herbst\",\"firstName\":\"Günter\",\"lastName\":\"Herbst\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"id\":7}"
     }
   }
