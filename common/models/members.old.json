@@ -17,6 +17,16 @@
     "lastName": {
       "type": "string"
     },
+    "cupsOfCoffee": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "priceToPay": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
     "paid": {
       "type": "boolean",
       "required": true,

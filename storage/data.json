@@ -5,7 +5,8 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "members": 8
+    "members": 8,
+    "coffees": 2
   },
   "models": {
     "User": {},
@@ -14,13 +15,10 @@
     "RoleMapping": {},
     "Role": {},
     "members": {
-      "1": "{\"fullName\":\"Martin Saigger\",\"firstName\":\"Martin\",\"lastName\":\"Saigger\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"cardId\":\"09 18 18 25\",\"id\":1}",
-      "2": "{\"fullName\":\"Markus Hölzle\",\"firstName\":\"Markus\",\"lastName\":\"Hölzle\",\"cupsOfCoffee\":2,\"priceToPay\":0.5,\"paid\":false,\"cardId\":\"\",\"id\":2}",
-      "3": "{\"fullName\":\"Andreas Müller\",\"firstName\":\"Andreas\",\"lastName\":\"Müller\",\"cupsOfCoffee\":1,\"priceToPay\":0.25,\"paid\":false,\"cardId\":\"\",\"id\":3}",
-      "4": "{\"fullName\":\"Stefan  Diet \",\"firstName\":\"Stefan\",\"lastName\":\"Diet\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"cardId\":\"\",\"id\":4}",
-      "5": "{\"fullName\":\"Thomas  Maier\",\"firstName\":\"Thomas \",\"lastName\":\"Maier\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"cardId\":\"\",\"id\":5}",
-      "6": "{\"fullName\":\"Markus Müller\",\"firstName\":\"Markus\",\"lastName\":\"Müller\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"cardId\":\"\",\"id\":6}",
-      "7": "{\"fullName\":\"Günter Herbst\",\"firstName\":\"Günter\",\"lastName\":\"Herbst\",\"cupsOfCoffee\":0,\"priceToPay\":0,\"paid\":false,\"cardId\":\"\",\"id\":7}"
+      "1": "{\"fullName\":\"Martin Saigger\",\"firstName\":\"Martin\",\"lastName\":\"Saigger\",\"paid\":false,\"cardId\":\"09 18 18 25\",\"id\":1}"
+    },
+    "coffees": {
+      "1": "{\"id\":1,\"member\":1,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"model\":\"string\",\"property\":\"string\",\"accessType\":\"string\",\"permission\":\"string\",\"principalType\":\"string\",\"principalId\":\"string\"}"
     }
   }
 }

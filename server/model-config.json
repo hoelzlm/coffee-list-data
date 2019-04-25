@@ -38,5 +38,9 @@
   "members": {
     "dataSource": "db",
     "public": true
+  },
+  "coffees": {
+    "dataSource": "db",
+    "public": true
   }
 }

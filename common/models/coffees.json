@@ -1,0 +1,32 @@
+{
+  "name": "coffees",
+  "plural": "coffees",
+  "base": "ACL",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "member": {
+      "type": "number",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "default": 0.25
+    },
+    "timestamp": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
