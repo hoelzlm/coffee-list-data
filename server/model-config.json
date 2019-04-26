@@ -35,12 +35,16 @@
     "dataSource": "db",
     "public": false
   },
-  "members": {
-    "dataSource": "mongodb",
+  "Member": {
+    "dataSource": "localhost",
     "public": true
   },
-  "coffees": {
-    "dataSource": "mongodb",
+  "coffee": {
+    "dataSource": "localhost",
+    "public": true
+  },
+  "Card": {
+    "dataSource": "localhost",
     "public": true
   }
 }

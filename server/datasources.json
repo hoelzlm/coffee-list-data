@@ -21,7 +21,7 @@
     "url": "mongodb://localhost:27017/coffee-list",
     "database": "coffee-list",
     "password": "muwo-123",
-    "name": "mongodb",
+    "name": "localhost",
     "user": "admin",
     "connector": "mongodb"
   }

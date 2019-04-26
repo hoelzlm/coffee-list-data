@@ -1,28 +1,21 @@
 {
-  "name": "members",
+  "name": "Member",
   "plural": "members",
-  "base": "ACL",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "fullName": {
+    "Name": {
       "type": "string",
       "required": true
     },
-    "firstName": {
-      "type": "string"
+    "LastName": {
+      "type": "string",
+      "required": true
     },
-    "lastName": {
-      "type": "string"
-    },
-    "paid": {
-      "type": "boolean",
-      "required": true,
-      "default": false
-    },
-    "cardId": {
+    "FirstName": {
       "type": "string"
     }
   },

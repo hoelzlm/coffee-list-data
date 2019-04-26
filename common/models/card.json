@@ -1,0 +1,23 @@
+{
+  "name": "Card",
+  "plural": "cards",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "CardId": {
+      "type": "string",
+      "required": true
+    },
+    "Member": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

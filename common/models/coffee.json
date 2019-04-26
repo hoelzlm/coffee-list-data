@@ -1,22 +1,22 @@
 {
-  "name": "coffees",
+  "name": "Coffee",
   "plural": "coffees",
-  "base": "ACL",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "member": {
-      "type": "number",
+    "Member": {
+      "type": "string",
       "required": true
     },
-    "price": {
+    "Price": {
       "type": "number",
       "required": true,
       "default": 0.25
     },
-    "timestamp": {
+    "Timestamp": {
       "type": "date",
       "required": true
     }
