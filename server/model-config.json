@@ -36,11 +36,11 @@
     "public": false
   },
   "members": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "coffees": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   }
 }

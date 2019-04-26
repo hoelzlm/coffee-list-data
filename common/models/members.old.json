@@ -17,6 +17,14 @@
     "lastName": {
       "type": "string"
     },
+    "paid": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "cardId": {
+      "type": "string"
+    },
     "cupsOfCoffee": {
       "type": "number",
       "required": true,
@@ -26,14 +34,6 @@
       "type": "number",
       "required": true,
       "default": 0
-    },
-    "paid": {
-      "type": "boolean",
-      "required": true,
-      "default": false
-    },
-    "cardId": {
-      "type": "string"
     }
   },
   "validations": [],

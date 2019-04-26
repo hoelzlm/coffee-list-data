@@ -6,7 +6,7 @@
     "RoleMapping": 1,
     "Role": 1,
     "members": 8,
-    "coffees": 2
+    "coffees": 8
   },
   "models": {
     "User": {},
@@ -15,10 +15,17 @@
     "RoleMapping": {},
     "Role": {},
     "members": {
-      "1": "{\"fullName\":\"Martin Saigger\",\"firstName\":\"Martin\",\"lastName\":\"Saigger\",\"paid\":false,\"cardId\":\"09 18 18 25\",\"id\":1}"
+      "1": "{\"fullName\":\"Martin Saigger\",\"firstName\":\"Martin\",\"lastName\":\"Saigger\",\"paid\":false,\"cardId\":\"09 18 18 25\",\"id\":1}",
+      "2": "{\"fullName\":\"Markus Hölzle\",\"firstName\":\"Markus\",\"lastName\":\"Hölzle\",\"paid\":false,\"cardId\":\"93 138 87 75\",\"id\":2}",
+      "3": "{\"fullName\":\"Andreas Müller\",\"firstName\":\"Andreas\",\"lastName\":\"Müller\",\"paid\":false,\"cardId\":\"\",\"id\":3}"
     },
     "coffees": {
-      "1": "{\"id\":1,\"member\":1,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"model\":\"string\",\"property\":\"string\",\"accessType\":\"string\",\"permission\":\"string\",\"principalType\":\"string\",\"principalId\":\"string\"}"
+      "2": "{\"member\":1,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"id\":2}",
+      "3": "{\"member\":2,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"id\":3}",
+      "4": "{\"member\":2,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"id\":4}",
+      "5": "{\"member\":2,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"id\":5}",
+      "6": "{\"member\":1,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"id\":6}",
+      "7": "{\"member\":3,\"price\":0.25,\"timestamp\":\"2019-04-25T04:58:38.686Z\",\"id\":7}"
     }
   }
 }
