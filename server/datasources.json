@@ -5,16 +5,6 @@
     "file": "storage/data.json",
     "connector": "memory"
   },
-  "mongodb": {
-    "host": "de-xdvm934",
-    "port": 27017,
-    "url": "mongodb://de-xdvm934:27017/coffee-list",
-    "database": "coffee-list",
-    "password": "muwo-123",
-    "name": "mongodb",
-    "user": "admin",
-    "connector": "mongodb"
-  },
   "localhost": {
     "host": "localhost",
     "port": 27017,
