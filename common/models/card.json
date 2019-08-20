@@ -7,11 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "CardId": {
+    "cardId": {
       "type": "string",
       "required": true
     },
-    "Member": {
+    "member": {
       "type": "string",
       "required": true
     }

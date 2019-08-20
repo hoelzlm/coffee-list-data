@@ -1,5 +1,5 @@
 {
-  "name":"coffee",
+  "name": "Coffee",
   "plural": "coffees",
   "base": "PersistedModel",
   "idInjection": true,
@@ -7,16 +7,16 @@
     "validateUpsert": true
   },
   "properties": {
-    "Member": {
+    "member": {
       "type": "string",
       "required": true
     },
-    "Price": {
+    "price": {
       "type": "number",
       "required": true,
       "default": 0.25
     },
-    "Timestamp": {
+    "timestamp": {
       "type": "date",
       "required": true
     }

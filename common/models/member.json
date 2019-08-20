@@ -7,20 +7,39 @@
     "validateUpsert": true
   },
   "properties": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "LastName": {
-      "type": "string",
-      "required": true
+    "lastName": {
+      "type": "string"
     },
-    "FirstName": {
+    "firstName": {
+      "type": "string"
+    },
+    "email": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "coffees": {
+      "type": "hasMany",
+      "model": "Coffee",
+      "foreignKey": "member",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "cards": {
+      "type": "hasMany",
+      "model": "Card",
+      "foreignKey": "member",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

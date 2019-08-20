@@ -39,7 +39,7 @@
     "dataSource": "localhost",
     "public": true
   },
-  "coffee": {
+  "Coffee": {
     "dataSource": "localhost",
     "public": true
   },

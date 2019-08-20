@@ -4,7 +4,7 @@
     "generateOperationScopedModels": true
   },
   "n-odata-server": {
-    "path": "/odata/*",
+    "path": "/odata/v2/*",
     "odataversion": "2"
   }
 }
