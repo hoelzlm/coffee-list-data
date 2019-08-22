@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "config": "^3.2.2",
     "node-odata": "^0.7.16"
   },
   "devDependencies": {},
