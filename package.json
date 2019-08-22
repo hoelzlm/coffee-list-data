@@ -1,14 +1,23 @@
 {
-  "name": "z-coffee-list-odata",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "name": "coffee-list-odata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "morgan": "~1.9.0"
-  }
+    "node-odata": "^0.7.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoelzlm/coffee-list-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoelzlm/coffee-list-data/issues"
+  },
+  "homepage": "https://github.com/hoelzlm/coffee-list-data#readme"
 }
