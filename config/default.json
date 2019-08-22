@@ -1,0 +1,5 @@
+{
+    "odata": {
+        "db_path": "mongodb://localhost:27017/coffee-list"
+    }
+}
