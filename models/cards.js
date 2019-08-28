@@ -1,6 +1,6 @@
 module.exports = {
     uid: String,
-    created: Date,
+    created: { type: Date, default: Date.now },
     updated: Date,
     cardId: String
 }

@@ -47,6 +47,28 @@ server.post('/login', function (req, res, next) {
     })
 });
 
+server.get('/coffeesPerUser', function (req, res, next) {
+    let uid = req.query.uid;
 
+    server._db.collection('coffees').find({ "uid": uid }).toArray((err, result) => {
+        if (err) throw err;
+
+        //get all coffees for user
+        let count = result.length;
+
+        //add all amount to one price
+        let price = 0
+        for (let item of result) {
+            price = price + item['amount'];
+        }
+
+        //get latest date
+        let date = result[result.length - 1]['date'];
+
+        res.json({ "count": count, "price": price, "lastCoffee": date });
+
+    })
+
+});
 
 module.exports = server;
