@@ -1,6 +1,6 @@
 module.exports = {
     uid: Object,
-    created: Date,
+    created: { type: Date, default: Date.now },
     updated: Date,
     name: String,
     location: { type: [Number], default: [0, 0] },
