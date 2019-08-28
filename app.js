@@ -2,7 +2,10 @@ const odata = require('node-odata');
 const config = require('config');
 
 // utils
-const { encryptPasswort, validatePasswort } = require('./utils/encryption');
+const {
+    encryptPasswort,
+    validatePasswort
+} = require('./utils/encryption');
 
 //models
 const usersModel = require('./models/users');
@@ -33,24 +36,40 @@ server.post('/login', function (req, res, next) {
     console.log(req.body);
 
     if (email == undefined || password == undefined) {
-        res.json({ "error": "email or password missing" }).status(404);
+        res.json({
+            "error": "email or password missing"
+        }).status(404);
     }
 
-    server._db.collection('users').findOne({ "email": email }, (err, result) => {
+    server._db.collection('users').findOne({
+        "email": email
+    }, (err, result) => {
         if (err) throw err;
 
         if (result && result.password == password) {
-            res.json({ "id": result._id }).status(201);
+            res.json({
+                "id": result._id
+            }).status(201);
         } else {
-            res.json({ "error": "invalid password or email" }).status(403);
+            res.json({
+                "error": "invalid password or email"
+            }).status(403);
         }
     })
 });
 
-server.get('/coffeesPerUser', function (req, res, next) {
+server.get('/coffees/current', function (req, res, next) {
     let uid = req.query.uid;
 
-    server._db.collection('coffees').find({ "uid": uid }).toArray((err, result) => {
+    let date = new Date();
+    let firstDayThisMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+
+    server._db.collection('coffees').find({
+        "uid": uid,
+        "date": {
+            $gt: firstDayThisMonth
+        }
+    }).toArray((err, result) => {
         if (err) throw err;
 
         //get all coffees for user
@@ -65,7 +84,29 @@ server.get('/coffeesPerUser', function (req, res, next) {
         //get latest date
         let date = result[result.length - 1]['date'];
 
-        res.json({ "count": count, "price": price, "lastCoffee": date });
+        //get coffes split in days
+        let coffees = {};
+
+        let allDaysAsTimestamp = Array.from(result, (item) => item['date']);
+        let allDaysDayBased = Array.from(allDaysAsTimestamp, (item) => new Date(item.getFullYear(), item.getMonth(), item.getDate(), 0, 0, 0))
+        let uniqeDaysOfMonth = allDaysDayBased.map((date) => date.getTime())
+            .filter((item, index, array) => array.indexOf(item) === index)
+            .map((time) => new Date(time));
+
+        for (day of uniqeDaysOfMonth) {
+            coffees[day] = 0;
+        }
+
+        for (day of allDaysDayBased) {
+            coffees[day]++
+        }
+
+        res.json({
+            "count": count,
+            "price": price,
+            "coffees": coffees,
+            "lastCoffee": date
+        });
 
     })
 
