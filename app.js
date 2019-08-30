@@ -74,44 +74,54 @@ server.get('/coffees/current', function (req, res, next) {
     }).toArray((err, result) => {
         if (err) throw err;
 
-        //get all coffees for user
-        let count = result.length;
+        if (result.length > 0) {
 
-        //add all amount to one price
-        let price = 0
-        for (let item of result) {
-            price = price + item['amount'];
+            //get all coffees for user
+            let count = result.length;
+
+            //add all amount to one price
+            let price = 0
+            for (let item of result) {
+                price = price + item['amount'];
+            }
+
+            //get latest date
+            let date = result[result.length - 1]['date'];
+
+            //get coffes split in days
+            let coffees = {};
+
+            let allDaysAsTimestamp = Array.from(result, (item) => item['date']);
+            let allDaysDayBased = Array.from(allDaysAsTimestamp, (item) => new Date(item.getFullYear(), item.getMonth(), item.getDate(), 0, 0, 0))
+            let uniqeDaysOfMonth = allDaysDayBased.map((date) => date.getTime())
+                .filter((item, index, array) => array.indexOf(item) === index)
+                .map((time) => new Date(time));
+
+            for (day of uniqeDaysOfMonth) {
+                console.log(day)
+                coffees[day] = 0;
+            }
+
+            for (day of allDaysDayBased) {
+                coffees[day]++
+            }
+
+            res.json({
+                "count": count,
+                "price": price,
+                "coffees": coffees,
+                "lastCoffee": date
+            });
+        } else {
+            res.json({
+                "count": 0,
+                "price": 0,
+                "coffees": 0,
+                "lastCoffee": 0
+            });
         }
-
-        //get latest date
-        let date = result[result.length - 1]['date'];
-
-        //get coffes split in days
-        let coffees = {};
-
-        let allDaysAsTimestamp = Array.from(result, (item) => item['date']);
-        let allDaysDayBased = Array.from(allDaysAsTimestamp, (item) => new Date(item.getFullYear(), item.getMonth(), item.getDate(), 0, 0, 0))
-        let uniqeDaysOfMonth = allDaysDayBased.map((date) => date.getTime())
-            .filter((item, index, array) => array.indexOf(item) === index)
-            .map((time) => new Date(time));
-
-        for (day of uniqeDaysOfMonth) {
-            console.log(day)
-            coffees[day] = 0;
-        }
-
-        for (day of allDaysDayBased) {
-            coffees[day]++
-        }
-
-        res.json({
-            "count": count,
-            "price": price,
-            "coffees": coffees,
-            "lastCoffee": date
-        });
-
     })
+
 })
 
 server.get('/coffees/last', function (req, res, next) {
@@ -132,41 +142,51 @@ server.get('/coffees/last', function (req, res, next) {
     }).toArray((err, result) => {
         if (err) throw err;
 
-        //get all coffees for user
-        let count = result.length;
+        if (result.length > 0) {
 
-        //add all amount to one price
-        let price = 0
-        for (let item of result) {
-            price = price + item['amount'];
+            //get all coffees for user
+            let count = result.length;
+
+            //add all amount to one price
+            let price = 0
+            for (let item of result) {
+                price = price + item['amount'];
+            }
+
+            //get latest date
+            let date = result[result.length - 1]['date'];
+
+            //get coffes split in days
+            let coffees = {};
+
+            let allDaysAsTimestamp = Array.from(result, (item) => item['date']);
+            let allDaysDayBased = Array.from(allDaysAsTimestamp, (item) => new Date(item.getFullYear(), item.getMonth(), item.getDate(), 0, 0, 0))
+            let uniqeDaysOfMonth = allDaysDayBased.map((date) => date.getTime())
+                .filter((item, index, array) => array.indexOf(item) === index)
+                .map((time) => new Date(time));
+
+            for (day of uniqeDaysOfMonth) {
+                coffees[day] = 0;
+            }
+
+            for (day of allDaysDayBased) {
+                coffees[day]++
+            }
+
+            res.json({
+                "count": count,
+                "price": price,
+                "coffees": coffees,
+                "lastCoffee": date
+            });
+        } else {
+            res.json({
+                "count": 0,
+                "price": 0,
+                "coffees": 0,
+                "lastCoffee": 0
+            });
         }
-
-        //get latest date
-        let date = result[result.length - 1]['date'];
-
-        //get coffes split in days
-        let coffees = {};
-
-        let allDaysAsTimestamp = Array.from(result, (item) => item['date']);
-        let allDaysDayBased = Array.from(allDaysAsTimestamp, (item) => new Date(item.getFullYear(), item.getMonth(), item.getDate(), 0, 0, 0))
-        let uniqeDaysOfMonth = allDaysDayBased.map((date) => date.getTime())
-            .filter((item, index, array) => array.indexOf(item) === index)
-            .map((time) => new Date(time));
-
-        for (day of uniqeDaysOfMonth) {
-            coffees[day] = 0;
-        }
-
-        for (day of allDaysDayBased) {
-            coffees[day]++
-        }
-
-        res.json({
-            "count": count,
-            "price": price,
-            "coffees": coffees,
-            "lastCoffee": date
-        });
 
     })
 
