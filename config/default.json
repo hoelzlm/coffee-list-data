@@ -1,5 +1,5 @@
 {
     "odata": {
-        "db_path": "mongodb://localhost:27017/coffee-list"
+        "db_path": "mongodb://raspberrypi:27017/coffee-list"
     }
 }

@@ -1,7 +1,12 @@
 module.exports = {
     uid: Object,
-    created: { type: Date, default: Date.now },
+    created: {
+        type: Date,
+        default: Date.now
+    },
     updated: Date,
     name: String,
-    members: { type: [Object] },
+    members: {
+        type: [String]
+    },
 }
