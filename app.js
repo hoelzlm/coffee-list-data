@@ -13,7 +13,7 @@ const cardsModel = require('./models/cards');
 const coffeesModel = require('./models/coffees');
 const departmentsModel = require('./models/departments');
 const paymentsModel = require('./models/payments');
-
+const favoritesModel = require('./models/favorites');
 //routes
 //const loginRoute = require('./routes/login');
 
@@ -21,12 +21,12 @@ const paymentsModel = require('./models/payments');
 const db_path = config.get('odata.db_path');
 var server = odata(db_path);
 
-//TODO: specifi models (#7)
 server.resource('users', usersModel);
 server.resource('cards', cardsModel);
 server.resource('coffees', coffeesModel);
 server.resource('departments', departmentsModel);
 server.resource('payments', paymentsModel);
+server.resource('favorites', favoritesModel);
 
 server.post('/login', function (req, res, next) {
 
