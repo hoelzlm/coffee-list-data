@@ -5,4 +5,5 @@ module.exports = {
     updated: Date,
     firstName: String,
     lastName: String,
+    favorites: Object
 }
