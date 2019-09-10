@@ -1,5 +1,6 @@
 const odata = require('node-odata');
 const config = require('config');
+var braintree = require("braintree");
 
 // utils
 const {
@@ -57,6 +58,46 @@ server.post('/login', function (req, res, next) {
         }
     })
 });
+
+server.get('/checkout', function (req, res, next) {
+    var gateway = braintree.connect({
+        environment: braintree.Environment.Sandbox,
+        merchantId: '4n5xcdjfmnhjv3xx',
+        publicKey: 'n85pk78ztg73sywy',
+        privateKey: '432032d0f7ee6ae8630a4587a7ed2cd9'
+    });
+
+    gateway.clientToken.generate({}, function (err, response) {
+        res.json({'token': response.clientToken});
+    });
+})
+
+server.post('/checkout', function (req, res, next) {
+    var gateway = braintree.connect({
+        environment: braintree.Environment.Sandbox,
+        merchantId: '4n5xcdjfmnhjv3xx',
+        publicKey: 'n85pk78ztg73sywy',
+        privateKey: '432032d0f7ee6ae8630a4587a7ed2cd9'
+    });
+
+    var nonceFromTheClient = req.body.paymentMethodNonce;
+
+
+    var newTransaction = gateway.transaction.sale({
+        // TODO: adding amount from app
+        amount: "10",
+        paymentMethodNonce: nonceFromTheClient,
+        options: {
+            submitForSettlement: true
+        }
+    }, function (error, result) {
+        if (result) {
+            res.send(result);
+        } else {
+            res.status(500).send(error);
+        }
+    });
+})
 
 server.get('/coffees/current', function (req, res, next) {
     let uid = req.query.uid;

@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "braintree": "^2.19.0",
     "config": "^3.2.2",
     "node-odata": "^0.7.16"
   },
