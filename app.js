@@ -68,7 +68,9 @@ server.get('/checkout', function (req, res, next) {
     });
 
     gateway.clientToken.generate({}, function (err, response) {
-        res.json({'token': response.clientToken});
+        res.json({
+            'token': response.clientToken
+        });
     });
 })
 
