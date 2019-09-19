@@ -130,6 +130,7 @@ server.get('/coffees/current', function (req, res, next) {
 
             //get latest date
             let date = result[result.length - 1]['date'];
+            let user = result[result.length - 1]['added_by'];
 
             //get coffes split in days
             let coffees = {};
@@ -153,14 +154,16 @@ server.get('/coffees/current', function (req, res, next) {
                 "count": count,
                 "price": price,
                 "coffees": coffees,
-                "lastCoffee": date
+                "lastCoffee": date,
+                "added_by": user
             });
         } else {
             res.json({
                 "count": 0,
                 "price": 0,
                 "coffees": 0,
-                "lastCoffee": 0
+                "lastCoffee": 0,
+                "added_by": 0
             });
         }
     })
@@ -198,6 +201,7 @@ server.get('/coffees/last', function (req, res, next) {
 
             //get latest date
             let date = result[result.length - 1]['date'];
+            let user = result[result.length - 1]['added_by'];
 
             //get coffes split in days
             let coffees = {};
@@ -220,14 +224,16 @@ server.get('/coffees/last', function (req, res, next) {
                 "count": count,
                 "price": price,
                 "coffees": coffees,
-                "lastCoffee": date
+                "lastCoffee": date,
+                "added_by": user
             });
         } else {
             res.json({
                 "count": 0,
                 "price": 0,
                 "coffees": 0,
-                "lastCoffee": 0
+                "lastCoffee": 0,
+                "added_by": 0
             });
         }
 
